@@ -4,10 +4,11 @@ main(){
 	int c,state;
 	state = 0;
 	while((c=getchar()) != EOF){
-		if(state == 0) {
-		putchar(c);
-		if(c = ' ') state = 1;
-		} else {
+		if(state == 0) {	
+			if(c == ' ') state = 1;
+			putchar(c);
+		} 
+		else {
 			if(c != ' '){
 				putchar(c);
 				state = 0;
